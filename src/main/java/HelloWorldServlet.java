@@ -13,7 +13,7 @@ public class HelloWorldServlet extends HttpServlet {
         response.getWriter().println("<h1 style=\"font-family: fantasy;\">Hello, " + name + "!</h1>");
         response.getWriter().println("<p> Enter Your Name:</p>");
         response.getWriter().println("<form>");
-        response.getWriter().println("<input name =\" name\" />");
+        response.getWriter().println("<input name =\"name\" />");
         response.getWriter().println("<form>");
     }
 }
