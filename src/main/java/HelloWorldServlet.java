@@ -8,6 +8,15 @@ public class HelloWorldServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        out.println("<h1>Hello, World!</h1>");
+        String name = request.getParameter("name");
+        if(name == null) {
+            name = "World";
+        }
+        out.println("<h1 style=\"font-family: fantasy;\">Hello, " + name + "!</h1>");
+        response.getWriter().println("<p> Enter Your Name:</p>");
+        response.getWriter().println("<form>");
+        response.getWriter().println("<input name =\" name\" />");
+        response.getWriter().println("<form>");
+
     }
 }
