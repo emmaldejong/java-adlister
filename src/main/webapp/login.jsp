@@ -10,10 +10,11 @@
         response.sendRedirect("/profile.jsp");
     }
 %>
-<jsp:include page="partials/head.jsp"/>
+
 <html>
     <head>
         <title>Login Page</title>
+        <jsp:include page="partials/head.jsp"/>
     </head>
     <body>
     <jsp:include page="partials/navbar.jsp"/>
