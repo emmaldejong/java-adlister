@@ -4,6 +4,7 @@
         <title>Profile Page</title>
     </head>
     <body>
+    <jsp:include page="partials/navbar.jsp"/>
         <h1>Welcome to Your Admin Profile!</h1>
     </body>
 </html>
