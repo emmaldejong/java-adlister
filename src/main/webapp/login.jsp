@@ -10,20 +10,26 @@
         response.sendRedirect("/profile.jsp");
     }
 %>
-
+<jsp:include page="partials/head.jsp"/>
 <html>
     <head>
         <title>Login Page</title>
     </head>
     <body>
-    <h2>Please log in:</h2>
-    <form method="post" action="/login.jsp">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        <input type="submit" value="Login">
-    </form>
+    <div class="container">
+        <h2>Please log in:</h2>
+        <form method="post" action="/login.jsp">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="enter username...">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="enter password...">
+            </div>
+            <input type="submit" value="Login" class="btn btn-default">
+        </form>
+    </div>
     </body>
 </html>
 
