@@ -7,10 +7,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Ads Index</title>
-</head>
-<body>
-
-</body>
+    <head>
+        <title>Ads Index</title>
+        <jsp:include page="/partials/head.jsp">
+            <jsp:param name="title" value="Please Log In" />
+        </jsp:include>
+    </head>
+    <body>
+        <jsp:include page="/partials/navbar.jsp" />
+        <div>
+            <h1>Listing of all the ads</h1>
+        </div>
+    </body>
 </html>
