@@ -10,12 +10,19 @@
     </head>
     <body>
         <jsp:include page="/partials/navbar.jsp" />
-        <div>
-            <h1>Listing of all the ads</h1>
-            <c:forEach var="ad" items="${ads}">
-                <h1>${ad.title}</h1>
-                <p>${ad.description}</p>
-            </c:forEach>
+        <div class="container-fluid">
+            <h1>All Ads Are Listed Below:</h1>
+            <hr>
+            <div class="col-md-6">
+                <c:forEach var="ad" items="${ads}">
+                    <h1>${ad.title}</h1>
+                    <p>${ad.description}</p>
+                    <form>
+                        <input type="hidden" name="ad" value="${ad.id}"/>
+                        <input type="submit" value="view details"/>
+                    </form>
+                </c:forEach>
+            </div>
         </div>
     </body>
 </html>
