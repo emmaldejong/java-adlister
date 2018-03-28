@@ -11,6 +11,7 @@
         <title>Howdy!</title>
     </head>
     <body>
-        <h1>Well, howdy, ${name}</h1>
+        <%--expresion language tags--%>
+        <h1>Well, howdy, ${name}!</h1>
     </body>
 </html>
