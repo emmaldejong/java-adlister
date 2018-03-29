@@ -10,6 +10,9 @@
 
     <div class="container">
         <h1>Viewing your profile.</h1>
+        <form action="/logout" method="post">
+            <input type="submit" value="Logout"/>
+        </form>
     </div>
 
 </body>
