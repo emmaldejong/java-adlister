@@ -8,12 +8,9 @@ import java.io.IOException;
 @WebServlet(name = "ShowDetailServlet", urlPatterns = "/show")
 public class ShowDetailServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/show.jsp").forward(request, response);
+        Long id = Long.parseLong(request.getParameter("id"));
+//        Ad ad = DaoFactory.getAdsDao().findById(id);
+        request.getRequestDispatcher("/ads/show.jsp").forward(request, response);
     }
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String adId = request.getParameter("ad");
-        request.setAttribute("ad", adId);
-        request.getRequestDispatcher("/ads/index.jsp").forward(request, response);
-    }
+
 }
