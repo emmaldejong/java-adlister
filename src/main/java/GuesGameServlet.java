@@ -14,9 +14,8 @@ public class GuesGameServlet extends HttpServlet {
         request.setAttribute("guess", guess);
 
         String message;
-
         if(guess == correctGuess) {
-            message = "You guessed " + guess + ", which is correct!";
+            message = "You guessed correctly!";
         } else if (guess > correctGuess) {
             message = "You guessed " + guess + " but that was too high!";
         } else {
