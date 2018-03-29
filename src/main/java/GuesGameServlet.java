@@ -13,7 +13,8 @@ public class GuesGameServlet extends HttpServlet {
         int guess = Integer.parseInt(request.getParameter("guess"));
         request.setAttribute("guess", guess);
 
-        String message = "";
+        String message;
+
         if(guess == correctGuess) {
             message = "You guessed " + guess + ", which is correct!";
         } else if (guess > correctGuess) {
