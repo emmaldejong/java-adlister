@@ -8,9 +8,13 @@ import java.io.IOException;
 @WebServlet(name = "ShowDetailServlet", urlPatterns = "/show")
 public class ShowDetailServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Long id = Long.parseLong(request.getParameter("id"));
-//        Ad ad = DaoFactory.getAdsDao().findById(id);
+        int id = Integer.parseInt(request.getParameter("id"));
+        Ad ad = DaoFactory.getAdsDao().all().get(id - 1);
+        request.setAttribute("ad", ad);
+//        String back = request.getParameter("back");
+//        if (back != null && back.equalsIgnoreCase("return")) {
+//            response.sendRedirect("/ads/index.jsp");
+//        }
         request.getRequestDispatcher("/ads/show.jsp").forward(request, response);
     }
-
 }
