@@ -8,6 +8,9 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if (request.getSession().getAttribute("user")) {
+            response.sendRedirect("/login");
+        }
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
