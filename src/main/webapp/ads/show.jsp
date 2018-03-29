@@ -10,7 +10,12 @@
             <h1>Ad Information Listed Below:</h1>
             <hr>
             <div class="col-md-6">
-
+                <%--<c:forEach var="ad" items="${ads}">--%>
+                    <h1>${ad.title}</h1>
+                    <p>${ad.description}</p>
+                    <input type="button" value="Return" onclick="window.location='/ads'">
+                    <%--<input type="submit" name="back" value="Return to All Ads" id="back">--%>
+                <%--</c:forEach>--%>
             </div>
         </div>
     </body>
