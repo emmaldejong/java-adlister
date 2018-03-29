@@ -17,9 +17,8 @@
                 <c:forEach var="ad" items="${ads}">
                     <h1>${ad.title}</h1>
                     <p>${ad.description}</p>
-                    <form>
-                        <input type="hidden" name="ad" value="${ad.id}"/>
-                        <input type="submit" value="view details"/>
+                    <form action="/show" method="get">
+                        <button type="submit" name="id" value="${ad.id}">View Details</button>
                     </form>
                 </c:forEach>
             </div>
