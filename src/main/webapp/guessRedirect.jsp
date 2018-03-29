@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: emmadejong
@@ -11,9 +12,12 @@
         <title>Number Redirect Page</title>
     </head>
     <body>
-        ${message}
-        <form>
-            <input type="submit" value="guess again" name="again" class="btn btn-default">
-        </form>
+        <h1>${message}</h1>
+
+        <c:if test="${!message.equals('You guessed correctly!')}">
+            <form>
+                <input type="submit" value="guess again" name="again" class="btn btn-default">
+            </form>
+        </c:if>
     </body>
 </html>
