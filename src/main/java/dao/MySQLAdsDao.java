@@ -25,10 +25,12 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public List<Ad> all() {
+        String selectQuery = "SELECT * FROM ads";
         List<Ad> ads = new ArrayList<>();
+
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM ads");
+            ResultSet rs = stmt.executeQuery(selectQuery);
             while (rs.next()) {
                 Ad ad = new Ad();
                 ad.setId(rs.getLong("id"));
