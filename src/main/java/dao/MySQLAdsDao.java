@@ -8,22 +8,20 @@ import java.util.List;
 import com.mysql.cj.jdbc.Driver;
 import models.Ad;
 
-public class MySQLAdsDao extends Ads {
+public class MySQLAdsDao implements Ads {
     private static Connection connection = null;
 
-    public static void main(String[] args) {
-
-
+    public MySQLAdsDao(dao.Config config) {
         try {
             DriverManager.registerDriver(new Driver());
+            connection = DriverManager.getConnection(
+                    config.getUrl(),
+                    config.getUsername(),
+                    config.getPassword()
+            );
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUsername(),
-                config.getPassword()
-        );
     }
 
     @Override
