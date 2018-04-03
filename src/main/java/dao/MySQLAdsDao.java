@@ -40,7 +40,7 @@ public class MySQLAdsDao implements Ads {
                 ads.add(ad);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Error occured while displaying ads", e);
         }
         return ads;
     }
