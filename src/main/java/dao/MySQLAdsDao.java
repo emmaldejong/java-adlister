@@ -24,13 +24,14 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public List<Ad> all() {
+    public List<Ad> all() throws SQLException {
         List<Ad> ads = new ArrayList<>();
         Statement stmt = connection.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT * FROM ads");
+        rs.getString("Title");
+        rs.getString("Description");
         while (rs.next()) {
-            System.out.println("Title: " + rs.getString("title"));
-            System.out.println("Description: " + rs.getString("description"));
+            Ad ad = new Ad(1, "some title", "some description");
         }
         return ads;
     }
