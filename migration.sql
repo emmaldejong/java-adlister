@@ -19,3 +19,5 @@ CREATE TABLE ads (
   FOREIGN KEY (user_id) REFERENCES users(id),
   PRIMARY KEY (id)
 );
+
+INSERT INTO users (username, password, email) VALUE ('dwight', 'dwight1', 'dwight@dmpaper.com');
