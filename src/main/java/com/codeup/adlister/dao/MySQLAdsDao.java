@@ -49,7 +49,7 @@ public class MySQLAdsDao implements Ads {
             //sql query: SELECT * FROM ads WHERE title LIKE '%?%';
             //where '?' is whatever the user has typed in
                 //user input: cute puppies
-                //SELECT * FROM ads WHERE title LIKE '%cute puppies%';
+                //SELECT * FROM ads WHERE title LIKE '%cute puppies'; DROP TABLE ads; --%';
                     //user input: cute puppies' (invalid sql will cause syntax errors), the backend would need to be SELECT * FROM ads WHERE title LIKE '%cute puppies\%'; (\ is escaping the user input)
             //that's why we use prepared statements so we don't have to worry about escaping things
     @Override
