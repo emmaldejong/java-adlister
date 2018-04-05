@@ -21,3 +21,6 @@ public class DaoFactory {
         return usersdao;
     }
 }
+
+
+//Each table in the database will have a Dao. (short answer)
