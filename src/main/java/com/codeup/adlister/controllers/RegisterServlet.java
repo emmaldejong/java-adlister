@@ -21,6 +21,8 @@ public class RegisterServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
     }
 
+    //Servlet will use the DaoFactory to talk to the database, DaoFactory is the middle man.
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
         // TODO: ensure the submitted information is valid
         // TODO: create a new user based off of the submitted information
